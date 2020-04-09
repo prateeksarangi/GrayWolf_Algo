@@ -8,13 +8,13 @@ function Xa = GWOptimizer(population = 10, itr = 5)
     X(i) = rand();
   end
 
-  f = tan(X);
+  f = sin(X);
 
   f = sort(f, 'descend');
 
-  Xa = atan(f(1));
-  Xb = atan(f(2));
-  Xd = atan(f(3));
+  Xa = asin(f(1));
+  Xb = asin(f(2));
+  Xd = asin(f(3));
 
   while(itr--)
     for i = 1:population
@@ -33,11 +33,11 @@ function Xa = GWOptimizer(population = 10, itr = 5)
      A = [2*a*rand() - a, 2*a*rand() - a, 2*a*rand() - a];
      C = [2*rand(), 2*rand(), 2*rand()];
      
-     f = tan(X);
+     f = sin(X);
      f = sort(f, 'descend');
-     Xa = atan(f(1));
-     Xb = atan(f(2));
-     Xd = atan(f(3));
+     Xa = asin(f(1));
+     Xb = asin(f(2));
+     Xd = asin(f(3));
   end
   
   return;
