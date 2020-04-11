@@ -7,7 +7,8 @@ function Xa = GWOptimizer(population = 100, itr = 50)
   for i = 1:population
     X(i) = rand();
   end
-
+  
+  des = 2/itr;
   f = sin(X);
 
   f = sort(f, 'descend');
@@ -29,7 +30,7 @@ function Xa = GWOptimizer(population = 100, itr = 50)
       X(i+1) = (X1+X2+X3)/3;
      end
      
-     a -= 0.4;
+     a -= des;
      A = [2*a*rand() - a, 2*a*rand() - a, 2*a*rand() - a];
      C = [2*rand(), 2*rand(), 2*rand()];
      
