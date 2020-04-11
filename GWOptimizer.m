@@ -1,4 +1,4 @@
-function Xa = GWOptimizer(population = 10, itr = 5)
+function Xa = GWOptimizer(population = 100, itr = 50)
 
   a = 2;
   A = [2*a*rand() - a, 2*a*rand() - a, 2*a*rand() - a];
